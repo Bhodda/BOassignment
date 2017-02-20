@@ -1,411 +1,138 @@
-@font-face {
-    font-family: 'Gotham';
-    src: url('GothamLight.ttf');
-}
+/*-- reset -- */
+* {
+  margin: 0;
+  padding: 0; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: Gotham;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
 body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-
-header{
-    margin-top: 0;
-}
-
-header a {
-    text-decoration: none;
-    color: #747474;
-}
-
-header a:hover {
-    color: black;
-}
-
-#navlogo{
-    float: left;
-    padding-left: 10px;
-}
-
-#mainnav{
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
-    text-align: center;
-    border-bottom: solid 1px #d3d3d3;
-}
-
-#mainnav li{
-    display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 1.2em;
-}
-
-#subnav{
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: 20%;
-    margin-right: 20%;
-    width: 60%;
-    text-align: center;
-}
-
-#subnavbutton {
-    background-color: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 7px 14px;
-    border-radius: 15px;
-}
-
-button:hover {
-    background-color: #5d5d5d;
-}
-
-#subnav li {
-    display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 0.9em;
-}
-
-.active {
-    text-decoration: underline;
-    font-weight: 300;
-    color: black;
-}
-
-main {
-    background-color: #e6e6e6;
+  font: "GothamLight.ttf"; }
+  body p {
+    font-size: 1.7em; }
+  body h1 {
+    width: auto;
+    font-size: 3.5em;
+    margin-bottom: 5%; }
+  body button:hover {
+    cursor: pointer; }
+  body #modal-box.closed {
+    transform: translateY(110%); }
+  body header {
+    margin-top: 0; }
+    body header a {
+      color: #747474;
+      text-decoration: none; }
+      body header a:hover {
+        color: black; }
+    body header #navlogo {
+      float: left;
+      padding-left: 10px; }
+    body header #mainnav {
+      padding-top: 2%;
+      padding-bottom: 2%;
+      margin-left: 20%;
+      margin-right: 20%;
+      width: 60%;
+      text-align: center;
+      border-bottom: solid 1px #d3d3d3; }
+      body header #mainnav li {
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        font-size: 1.2em; }
+    body header #subnav {
+      padding-top: 2%;
+      padding-bottom: 2%;
+      margin-left: 20%;
+      margin-right: 20%;
+      width: 60%;
+      text-align: center; }
+      body header #subnav li {
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        font-size: 0.9em; }
+      body header #subnav button {
+        background-color: #2c2c2c;
+        color: white;
+        border: none;
+        padding: 7px 14px;
+        border-radius: 15px; }
+        body header #subnav button:hover {
+          background-color: #5d5d5d; }
+      body header #subnav .active {
+        text-decoration: underline;
+        font-weight: 300;
+        color: black; }
+  body main {
     padding-bottom: 6%;
     margin-bottom: 20px;
     height: auto;
-}
+    background-color: #e6e6e6; }
+    body main #beoplay {
+      display: inline-block;
+      margin-left: 8%;
+      margin-top: 2%;
+      width: 40%; }
+    body main #textcontainer {
+      float: right;
+      width: 41%;
+      height: 40%;
+      margin-left: 2%;
+      margin-right: 8%;
+      margin-top: 10%;
+      color: #747474;
+      display: block; }
+    body main .number {
+      font-size: 1.2em; }
+    body main .price {
+      margin-top: 12%;
+      font-size: 1.2em; }
+    body main aside {
+      background-color: #fffff0;
+      width: 620px;
+      height: 269px;
+      bottom: 0;
+      right: 0;
+      position: fixed;
+      transform: translateY(0);
+      transition: transform 0.6s ease; }
+      body main aside #modalcontainer {
+        float: right;
+        width: 50%; }
+        body main aside #modalcontainer #asideoverskrift {
+          font-size: 26px;
+          padding-left: 6%;
+          font-weight: bold;
+          color: #d9c6af; }
+        body main aside #modalcontainer #asidebrodtekst {
+          font-size: 18px;
+          margin-top: 6%;
+          text-align: center;
+          color: #d9c6af; }
+        body main aside #modalcontainer #signup {
+          display: inline-block;
+          font-size: 18px;
+          text-align: center;
+          padding: 3% 33%;
+          margin-top: 8%;
+          margin-left: 6%;
+          margin-right: 6%;
+          color: #fff;
+          background-color: #d9c6af;
+          text-decoration: none;
+          border-radius: 5px; }
+      body main aside img {
+        float: left;
+        width: 50%; }
+      body main aside button {
+        background-color: #2c2c2c;
+        color: white;
+        border: none;
+        padding: 7px 11px;
+        border-radius: 20px;
+        font-size: 16px;
+        z-index: 100;
+        top: -15px;
+        left: -326px;
+        position: relative; }
 
-#beoplaya2 {
-    display: inline-block;
-    margin-left: 8%;
-    margin-top: 2%;
-    width: 40%;
-}
-
-#textcontainer {
-    float: right;
-    width: 41%;
-    height: 40%;
-    margin-left: 2%;
-    margin-right: 8%;
-    margin-top: 10%;
-    color: #747474;
-    display: block;
-}
-
-
-h1 {
-    width: auto;
-    font-size: 3.5em;
-    margin-bottom: 5%;
-}
-
-p {
-    font-size: 1.7em;
-}
-
-.number{
-    font-size: 1.2em;
-}
-.price {
-    margin-top: 12%;
-    font-size: 1.2em;
-}
-
-#mainbottomnav {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    width: 100%;
-    text-align: center;
-    background-color: #2c2c2c;
-    border-bottom: solid 1px #7e7c7c;
-}
-
-#mainbottomnav li, label {
-    display: inline-block;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    font-size: 1.4em;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#mainbottomnav a, label {
-    color: #797979;
-    text-decoration: none;
-}
-
-#mainbottomnav a:hover {
-    color: #a2a2a2;
-}
-
-select {
-    background-color: #000000;
-    width: 12%;
-    padding: 5px;
-    line-height: 1;
-    border-radius: 20px;
-    border: none;
-    height: 34px;
-    color: white;
-}
-
-
-
-#subbottomnav {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    width: 100%;
-    text-align: center;
-    background-color: #2c2c2c;
-}
-
-#subbottomnav li {
-    display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding: 0.5%;
-}
-
-#subbottomnav a{
-    color:#d0d0d0;
-    text-decoration: none;
-}
-
-#subbottomnav a:hover {
-    color: #696969;
-}
-
-#justthetwo {
-    height: 100%;
-    padding-top:8%;
-    padding-bottom: 10%;
-    background-color: #333;
-}
-
-#justthetwo > p {
-    font-family: ;
-    color: white;
-    text-align: center;
-
-}
-
-#justthetwo > a {
-    display: block;
-    text-align: center;
-    margin-top: 1%;
-    color: #adadad;
-    text-decoration: none;
-}
-
-#justthetwo > a:hover {
-    color: #696969;
-}
-
-footer {
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: #333;
-}
-
-footer > p {
-    font-size: 15px;
-    display: inline-block;
-    color: #797979;
-}
-footer > a {
-    font-size: 15px;
-    display: inline-block;
-    color: #797979;
-}
-/* e' box 
------------------------------------------------------------------------------*/
-
-aside {
-    background-color: #fffff0;
-    width: 620px;
-    height: 269px;
-    bottom: 0;
-    right: 0;
-    position:fixed;
-    transform: translateY(0);
-    transition: transform 0.6s ease;
-}
-aside > img {
-    float: left;
-    width: 50%;
-}
-#modalbutton{
-    background-color: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 7px 11px;
-    border-radius: 20px;
-    font-size: 16px;
-    z-index: 100;
-    top: -15px;
-    left: -326px;
-    position: relative;
-}
-#modalcontainer{
-    float: right;
-    width: 50%;
-}
-#asideoverskrift{
-    font-size: 26px;
-    padding-left: 6%;
-    font-weight: bold;
-    color: #d9c6af;
-}
-#asidebrodtekst{
-    font-size: 18px;
-    margin-top: 6%;
-    text-align: center;
-    color:#ddddbb;
-}
-#signup {
-    display: inline-block;
-    font-size: 18px;
-    text-align: center;
-    padding: 3% 33%;
-    margin-top: 8%;
-    margin-left: 6%;
-    margin-right: 6%;
-    color: #fff;
-    background-color: #d9c6af;
-    text-decoration: none;
-    border-radius: 5px;
-}
-button:hover {
-    cursor: pointer;
-}
-#modal-box.closed{
-    transform: translateY(110%);
-}
-
-/* MediaQ
------------------------------------------------------------------------------*/
-
-@media all and (min-width: 0px) {
-    #textcontainer {
-        font-size: 0.4em;
-    }
-    #justthetwo > p {
-        font-size: 2.5em;
-    }
-    #justthetwo > a {
-        font-size: 0.6em;
-    }
-    footer > p {
-        font-size: 0.6em;
-    }
-    footer > a {
-        font-size: 0.6em;
-    }
-    #modal-box{
-        display: none;
-    }
-}
-
-@media all and (min-width: 480px){
-    #textcontainer {
-        font-size: 0.5em;
-    }
-    #justthetwo > p {
-        font-size: 3em;
-    }
-    footer > p {
-        font-size: 0.7em;
-    }
-    footer > a {
-        font-size: 0.7em;
-    }
-}
-
-@media all and (min-width: 856px) {
-    #textcontainer {
-        font-size: 0.8em;
-    }
-    #justthetwo > p {
-        font-size: 4em;
-    }
-    #justthetwo > a {
-        font-size: 1.2em;
-    }
-    footer > p {
-        font-size: 0.8em;
-    }
-    footer > a {
-        font-size: 0.8em;
-    }
-    #modal-box{
-        display: block;
-    }
-}
-@media all and (min-width: 1200px) {
-    #textcontainer {
-        font-size: 1em;
-    }
-    #justthetwo > p {
-        font-size: 5em;
-    }
-    footer > p {
-        font-size: 1em;
-    }
-    footer > a {
-        font-size: 1em;
-    }
-}
+/*# sourceMappingURL=style.css.map */

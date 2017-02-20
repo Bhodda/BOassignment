@@ -3,7 +3,7 @@
     <head>
         <title>BeoPlay A2</title>
         <link rel="icon" href="images/favicon.png"/>
-        <link href="style/style.css" rel="stylesheet">
+        <link href="style/style1.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="script.js"></script>
     </head>
@@ -33,8 +33,8 @@
 
 
         <main>
-            <article>
-                <img src="images/a2.png" alt="B&O PLAY A2 product image" id="beoplaya2">
+            <section>
+                <img src="images/a2.png" alt="B&O PLAY A2 product image" id="beoplay">
                 <div id="textcontainer">
                     <h1>A2 Black Copper</h1>
                     <p>A speciel edition of the ultra portable Bluetooth speaker, featuring a delicate aluminium core with a tint of copper.</p>
@@ -43,40 +43,50 @@
                         <span class="number">2.799</span> 
                     </p>
                 </div>
-            </article>
+            </section>
+
+            <aside id="modal-box">
+                <button id="modalbutton">X</button>
+                <img src="images/modal.png">
+                <div id="modalcontainer">
+                    <p id="asideoverskrift">Sign up and win the new BeoPlay H7</p>
+                    <p id="asidebrodtekst">We'll draw a winner at random. The competition ends April 31, 2016 at 10:00 CET.</p>
+                    <a href="#" id="signup">Sign up</a>
+                </div>
+            </aside>
         </main>
 
-
-        <nav id="bottomnav">
-            <ul id="mainbottomnav">
-                <li><a href="#">Sign up for B&O PLAY news</a></li>
-                <li><a href="#">Find store</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Register Product</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">About</a></li>
-                <label>Shipping:</label>
-                <select>
-                    <option value="dk">Denmark</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="de">Germany</option>
-                </select>
-            </ul>
-
-            <ul id="subbottomnav">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Limited Warranty</a></li>
-                <li><a href="#">B&O Play is a proud member of The Bang & Olufsen Group</a></li>
-            </ul>
-        </nav>
-
-        <section id="justthetwo">
-            <p>"Just the two of us"</p>
-            <a href="#">Click and listen to B&O Play's Spotify for the perfect tunes.</a>
-        </section>
-
         <footer>
+            <nav>
+                <ul id="mainbottomnav">
+                    <li><a href="#">Sign up for B&O PLAY news</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Register Product</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">About</a></li>
+                    <label>Shipping:</label>
+                    <select>
+                        <option value="dk">Denmark</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="de">Germany</option>
+                    </select>
+                </ul>
+
+                <ul id="subbottomnav">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Limited Warranty</a></li>
+                    <li><a href="#">B&O Play is a proud member of The Bang & Olufsen Group</a></li>
+                </ul>
+            </nav>
+
+            <section id="justthetwo">
+                <p>"Just the two of us"</p>
+                <a href="#">Click and listen to B&O Play's Spotify for the perfect tunes.</a>
+            </section>
+
+
             <p>&copy; B&O PLAY 2015	B&O</p> 
             <p>play is a proud member of the</p> 
             <a href="#">bang & olufsen group</a>
@@ -85,14 +95,6 @@
             <a href="mailto:salessupport@beoplay.com">salessupport@beoplay.com</a>
         </footer>
 
-        <aside id="modal-box">
-            <button id="modalbutton">X</button>
-            <img src="images/modal.png">
-            <div id="modalcontainer">
-                <p id="asideoverskrift">Sign up and win the new BeoPlay H7</p>
-                <p id="asidebrodtekst">We'll draw a winner at random. The competition ends April 31, 2016 at 10:00 CET.</p>
-                <a href="#" id="signup">Sign up</a>
-            </div>
-        </aside>
+
     </body>
 </html>
